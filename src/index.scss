@@ -1,0 +1,385 @@
+// Fonts
+@font-face {
+  font-family: 'Manrope';
+  font-style: normal;
+  font-weight: 400;
+  src: url('./fonts/Manrope-Regular.woff');
+}
+
+@font-face {
+  font-family: 'Manrope';
+  font-style: bold;
+  font-weight: 700;
+  src: url('./fonts/Manrope-Bold.woff');
+}
+
+@font-face {
+  font-family: 'Roboto Mono';
+  font-style: regular;
+  font-weight: 400;
+  src: url('./fonts/RobotoMono-Regular.ttf');
+}
+
+// Variables
+$breakpoint: 768px;
+$max-width: 1260px;
+
+// Colors
+$main: #212121;
+$business: #192940;
+$kuju: #6BBFDB;
+$alta: #E6AE24;
+$sparitual-dark: #DBCBB6;
+$sparitual-light: #FFF7EE;
+$atlas: #001489;
+$burnout: #B39F8E;
+$voke: #78A22F;
+$cutler: #54205F;
+
+// Animations
+.react-reveal.work__item, .hero__contact .react-reveal {
+  transform: translateY(50px);
+  transition: opacity 25ms ease, transform 25ms ease;
+}
+
+.react-reveal.header__nav {
+  transform: translateY(-30px);
+  transition: opacity 25ms ease, transform 25ms ease;
+  transition-delay: 200ms;
+}
+
+.fadeUp, .fadeDown {
+  opacity: 1;
+  transform: translateY(0px);
+  transition: opacity 25ms ease, transform 25ms ease;
+}
+
+.fade {
+  opacity: 1;
+  transition: opacity 25ms ease;
+  transition-delay: 100ms;
+}
+
+// General
+* {
+  font-family: 'Manrope';
+  box-sizing: border-box;
+}
+
+h1, h2, h3, h4, h5, h5, p {
+  margin: 0;
+}
+
+h1 {
+  font-size: 80px;
+  font-weight: bold;
+  line-height: 1;
+
+  @media (max-width: $breakpoint) {
+    font-size: 50px;
+  }
+}
+
+h2 {
+  font-size: 40px;
+  font-weight: bold;
+  line-height: 1;
+
+  @media (max-width: $breakpoint) {
+    font-size: 30px;
+  }
+}
+
+p {
+  font-size: 18px;
+  line-height: 1.8;
+
+  @media (max-width: $breakpoint) {
+    font-size: 14px;
+  }
+}
+
+p.large {
+  font-size: 26px;
+
+  @media (max-width: $breakpoint) {
+    font-size: 16px;
+  }
+}
+
+p.mono {
+  font-family: 'Roboto Mono';
+  font-size: 20px;
+
+  @media (max-width: $breakpoint) {
+    font-size: 16px;
+  }
+}
+
+p.mono--small {
+  font-size: 16px;
+
+  @media (max-width: $breakpoint) {
+    font-size: 12px;
+  }
+}
+
+a {
+  color: $main;
+  text-decoration: underline;
+}
+
+.home {
+  overflow: hidden
+}
+
+.page-width {
+  max-width: $max-width;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 30px;
+}
+
+.divider {
+  width: 75px;
+  height: 5px;
+  margin: 15px 0;
+  background: $main;
+}
+
+.divider--large-margin {
+  margin: 30px 0;
+
+  @media (max-width: $breakpoint) {
+    margin: 20px 0;
+  }
+}
+
+.section-padding {
+  padding: 50px 0;
+
+  @media (max-width: $breakpoint) {
+    padding: 30px 0;
+  }
+}
+
+// Header
+.header {
+  width: 100%;
+  padding: 15px 0;
+  position: absolute;
+  top: 0;
+
+  .page-width {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+.header__logo {
+  img {
+    max-height: 50px;
+
+    @media (max-width: $breakpoint) {
+      max-height: 40px;
+    }
+  }
+}
+
+.header__nav {
+  display: flex;
+  align-items: center;
+
+  ul {
+    display: flex;
+  }
+
+  li {
+    list-style: none;
+    padding-right: 50px;
+
+    @media (max-width: $breakpoint) {
+      padding-right: 20px;
+    }
+  }
+}
+
+// Hero
+.hero {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  position: relative;
+  align-items: center;
+}
+
+// About
+.about__content {
+  max-width: 850px;
+  padding-left: 30px;
+  margin-bottom: 100px;
+  border-left: 5px solid $main;
+
+  h2 {
+    margin-bottom: 30px;
+  }
+}
+
+// Work
+.work__item {
+  display: flex;
+
+  @media (max-width: $breakpoint) {
+    display: block;
+  }
+}
+
+.work__item-image {
+  max-width: 500px;
+  width: 100%;
+
+  img {
+    max-width: 100%;
+
+    @media (max-width: $breakpoint) {
+      max-width: 115%;
+      margin-left: -38px;
+      margin-right: -30px;
+      text-align: center;
+    }
+  }
+
+  @media (max-width: $breakpoint) {
+    margin: 0 auto;
+  }
+}
+
+.work__item-text {
+  max-width: 500px;
+  padding-top: 125px;
+  position: relative;
+
+  p.mono {
+    margin-bottom: 20px;
+    text-transform: lowercase;
+    font-size: 16px;
+  }
+
+  @media (max-width: $breakpoint) {
+    padding-top: 15px;
+    margin: 0 auto;
+  }
+}
+
+.work__item-link {
+  padding-top: 20px;
+
+  a {
+    font-family: 'Roboto Mono';
+  }
+}
+
+.work__item-blob {
+  max-width: 400px;
+  width: 100%;
+  position: absolute;
+  top: 10%;
+  left: -40%;
+  z-index: -1;
+
+  img {
+    max-width: 100%;
+  }
+
+  @media (max-width: $breakpoint) {
+    top: -50%;
+  }
+}
+
+.work__item.reversed {
+  flex-direction: row-reverse;
+
+  .work__item-text {
+    text-align: right;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+  }
+
+  .work__item-blob {
+    left: unset;
+    right: -40%;
+  }
+}
+
+// Contact
+.contact {
+  padding: 100px 0;
+  text-align: center;
+
+  @media (max-width: $breakpoint) {
+    padding: 50px;
+  }
+}
+
+.contact-form {
+  input, textarea {
+    max-width: 400px;
+    width: 100%;
+    display: block;
+    margin: 0 auto 30px auto;
+    padding: 10px 15px;
+
+    &:focus {
+      outline: none;
+    }
+  }
+
+  input {
+    border: 0;
+    border-bottom: $main 2px solid;
+  }
+
+  input[type=submit] {
+    border: 0;
+    background: $main;
+    color: white;
+    transition: .3s ease;
+    border: 2px solid $main;
+
+    &:hover {
+      cursor: pointer;
+      background: transparent;
+      color: $main;
+    }
+  }
+
+  textarea {
+    resize: none;
+    border: $main 2px solid;
+  }
+}
+
+// Footer
+.footer {
+  background: $main;
+  padding: 30px;
+  text-align: center;
+
+  .logo {
+    width: 100px;
+  }
+
+  .shopify {
+    display: block;
+    width: 200px;
+    margin: 30px auto 0 auto;
+  }
+
+  p {
+    font-size: 12px;
+    color: white;
+    font-weight: lighter;
+  }
+}
